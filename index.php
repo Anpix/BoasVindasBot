@@ -139,7 +139,7 @@ function processMessage($message) {
 
 	if (isset($message['text'])) {
 		$text = $message['text']; 
-
+		$member_name = $message['from']['first_name'];
 		if (strpos($text, "/start") === 0) {
 			$type = $message['chat']['type'];
 			if($type == 'private') {
